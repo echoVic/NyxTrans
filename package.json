@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "install": "pnpm install",
     "update": "pnpm update"
   },
   "dependencies": {
