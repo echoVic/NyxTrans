@@ -16,7 +16,7 @@ const features: Feature[] = [
   {
     icon: Zap,
     title: 'Lightning Fast Setup',
-    description: 'Get your internationalization up and running in under 5 minutes with our CLI tool and intuitive dashboard.'
+    description: 'Get your i18n up and running in under 5 minutes with our CLI tool and intuitive dashboard.'
   },
   {
     icon: Bot,

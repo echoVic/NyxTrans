@@ -10,8 +10,8 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 const waitlistSchema = z.object({
-  email: z.string().email('请输入有效的邮箱地址'),
-  name: z.string().min(2, '姓名至少需要2个字符').optional()
+  email: z.string().email('Please enter a valid email address'),
+  name: z.string().min(2, 'Name must be at least 2 characters').optional()
 })
 
 type WaitlistFormData = z.infer<typeof waitlistSchema>
@@ -33,10 +33,10 @@ export const WaitlistSection: React.FC = () => {
     setIsLoading(true)
     
     try {
-      // 这里可以集成实际的API调用
+      // Here you can integrate actual API calls
       console.log('Waitlist submission:', data)
       
-      // 模拟API调用
+      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       
       setIsSubmitted(true)
@@ -82,10 +82,10 @@ export const WaitlistSection: React.FC = () => {
           {/* Header */}
           <div className="mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              抢先体验 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">NyxTrans</span>
+              Get Early Access to <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">NyxTrans</span>
             </h2>
             <p className="text-lg text-gray-600">
-              加入等待列表，成为首批用户，享受早鸟优惠和专属支持
+              Join the waitlist to become one of the first users and enjoy early bird pricing and exclusive support
             </p>
           </div>
 
@@ -95,22 +95,22 @@ export const WaitlistSection: React.FC = () => {
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <span className="text-primary-600 font-bold">1</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">优先访问权</h3>
-              <p className="text-sm text-gray-600">第一时间获得产品访问权限</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Priority Access</h3>
+              <p className="text-sm text-gray-600">Get product access as soon as it's available</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <span className="text-primary-600 font-bold">2</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">早鸟优惠</h3>
-              <p className="text-sm text-gray-600">享受限时早鸟价格优惠</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Early Bird Pricing</h3>
+              <p className="text-sm text-gray-600">Enjoy limited-time early bird pricing</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <span className="text-primary-600 font-bold">3</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">专属支持</h3>
-              <p className="text-sm text-gray-600">获得一对一技术支持服务</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Exclusive Support</h3>
+              <p className="text-sm text-gray-600">Get one-on-one technical support</p>
             </div>
           </div>
 
@@ -121,7 +121,7 @@ export const WaitlistSection: React.FC = () => {
                 <input
                   {...register('name')}
                   type="text"
-                  placeholder="您的姓名（可选）"
+                  placeholder="Your Name (Optional)"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                 />
                 {errors.name && (
@@ -135,7 +135,7 @@ export const WaitlistSection: React.FC = () => {
                   <input
                     {...register('email')}
                     type="email"
-                    placeholder="您的邮箱地址"
+                    placeholder="Your Email"
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                   />
                 </div>
@@ -150,18 +150,18 @@ export const WaitlistSection: React.FC = () => {
                 className="w-full"
                 disabled={isLoading}
               >
-                {isLoading ? '提交中...' : '加入等待列表'}
+                {isLoading ? 'Submitting...' : 'Join Waitlist'}
               </Button>
             </div>
 
             <p className="mt-4 text-xs text-gray-500">
-              我们承诺保护您的隐私，不会向第三方分享您的信息
+              We promise to protect your privacy and will not share your information with third parties
             </p>
           </form>
 
           {/* Social Proof */}
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-4">已有 <span className="font-semibold text-primary-600">1,234+</span> 位开发者加入等待列表</p>
+            <p className="text-sm text-gray-600 mb-4"><span className="font-semibold text-primary-600">1,234+</span> developers have already joined the waitlist</p>
             <div className="flex justify-center items-center space-x-2">
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="w-8 h-8 bg-gray-300 rounded-full"></div>

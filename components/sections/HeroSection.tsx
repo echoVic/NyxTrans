@@ -17,23 +17,23 @@ export const HeroSection: React.FC = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-8 animate-fade-in">
               <Zap className="w-4 h-4 mr-2" />
-              现已开放内测 - 加入等待列表
+              Now in Beta - Join the Waitlist
             </div>
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 animate-slide-up leading-tight">
-              让代码{' '}
+              Simple
+              <br />
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-mono">
-                国际化
-              </span>{' '}
-              变得简单
+                I18n Solution
+              </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 animate-slide-up leading-relaxed px-4 sm:px-0" style={{ animationDelay: '0.1s' }}>
-              专为独立开发者和小团队打造的多语言支持工具。
+              The easiest way to add multi-language support to your website.
               <br className="hidden sm:block" />
-              无需复杂配置，轻松实现全球化部署。
+              Built for indie developers and small teams who want to go global without the complexity.
             </p>
 
             {/* CTA Buttons */}
@@ -48,11 +48,11 @@ export const HeroSection: React.FC = () => {
                   }
                 }}
               >
-                加入等待列表
+                Join Waitlist
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                查看演示
+                View Demo
               </Button>
             </div>
           </div>
@@ -69,27 +69,27 @@ export const HeroSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Globe className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2 font-mono">一键配置</h3>
+            <h3 className="font-semibold text-gray-900 mb-2 font-mono">One-Click Setup</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              安装CLI工具，几分钟内完成配置，无需复杂设置
+              Install our CLI tool and get started in minutes, not hours
             </p>
           </div>
           <div className="text-center p-4 sm:p-0">
             <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Zap className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2 font-mono">智能翻译</h3>
+            <h3 className="font-semibold text-gray-900 mb-2 font-mono">Smart Translation</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              AI驱动的翻译引擎，支持人工审核和质量优化
+              AI-powered translations with human review options
             </p>
           </div>
           <div className="text-center p-4 sm:p-0 sm:col-span-2 lg:col-span-1">
             <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <ArrowRight className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2 font-mono">灵活部署</h3>
+            <h3 className="font-semibold text-gray-900 mb-2 font-mono">Deploy Anywhere</h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              支持React、Vue、Next.js等主流框架
+              Works with React, Vue, Next.js, and any modern framework
             </p>
           </div>
         </div>

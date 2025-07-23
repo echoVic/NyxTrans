@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const deviceSizes = [
   { name: 'iPhone SE', width: 375, height: 667 },
@@ -12,10 +12,38 @@ const deviceSizes = [
 ]
 
 export const MobileTestHelper: React.FC = () => {
+  // 初始状态
   const [selectedDevice, setSelectedDevice] = useState(deviceSizes[0])
   const [isVisible, setIsVisible] = useState(false)
-
+  const [mounted, setMounted] = useState(false)
+  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 })
+  
+  // 仅在客户端执行
+  useEffect(() => {
+    setMounted(true)
+    setViewportSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
+    
+    const handleResize = () => {
+      setViewportSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+  
+  // 非开发环境不显示
   if (process.env.NODE_ENV !== 'development') {
+    return null
+  }
+  
+  // 服务器端渲染时不显示内容
+  if (!mounted) {
     return null
   }
 
@@ -25,7 +53,7 @@ export const MobileTestHelper: React.FC = () => {
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 z-50 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
-        title="移动端测试工具"
+        title="Mobile Test Tool"
       >
         📱
       </button>
@@ -34,7 +62,7 @@ export const MobileTestHelper: React.FC = () => {
       {isVisible && (
         <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-xl p-4 border border-gray-200 max-w-sm">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-gray-900">移动端测试</h3>
+            <h3 className="font-semibold text-gray-900">Mobile Testing</h3>
             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-gray-600"
@@ -46,7 +74,7 @@ export const MobileTestHelper: React.FC = () => {
           <div className="space-y-3">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                设备尺寸
+                Device Size
               </label>
               <select
                 value={selectedDevice.name}
@@ -65,36 +93,36 @@ export const MobileTestHelper: React.FC = () => {
             </div>
 
             <div className="text-sm text-gray-600">
-              <p>当前视口: {selectedDevice.width}×{selectedDevice.height}</p>
-              <p>实际视口: {window.innerWidth}×{window.innerHeight}</p>
+              <p>Current Viewport: {selectedDevice.width}×{selectedDevice.height}</p>
+              <p>Actual Viewport: {viewportSize.width}×{viewportSize.height}</p>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-medium text-gray-900 text-sm">测试检查项</h4>
+              <h4 className="font-medium text-gray-900 text-sm">Test Checklist</h4>
               <div className="space-y-1 text-xs text-gray-600">
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>导航栏在移动端正常显示</span>
+                  <span>Navigation displays properly on mobile</span>
                 </div>
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>英雄区域文字大小适中</span>
+                  <span>Hero section text size is appropriate</span>
                 </div>
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>功能卡片布局正确</span>
+                  <span>Feature cards layout is correct</span>
                 </div>
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>表单在移动端易于填写</span>
+                  <span>Forms are easy to fill on mobile</span>
                 </div>
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>按钮点击区域足够大</span>
+                  <span>Button touch areas are large enough</span>
                 </div>
                 <div className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span>页脚信息完整显示</span>
+                  <span>Footer information displays completely</span>
                 </div>
               </div>
             </div>

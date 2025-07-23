@@ -2,7 +2,7 @@ export const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'NyxTrans',
-  description: 'Internationalization tool for developers',
+  description: 'I18n tool for developers',
   url: 'https://nyxtrans.com',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Web',

@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 <span className="text-xl font-bold">NyxTrans</span>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
-                为独立开发者和小团队提供最简单的国际化解决方案，让您的产品轻松走向全球。
+                The simplest i18n solution for indie developers and small teams, making your products go global effortlessly.
               </p>
               <div className="flex space-x-4">
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -39,23 +39,23 @@ export const Footer: React.FC = () => {
 
             {/* Product */}
             <div>
-              <h3 className="font-semibold mb-4">产品</h3>
+              <h3 className="font-semibold mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">功能特性</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">定价方案</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">使用案例</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">更新日志</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Use Cases</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Changelog</Link></li>
               </ul>
             </div>
 
             {/* Support */}
             <div>
-              <h3 className="font-semibold mb-4">支持</h3>
+              <h3 className="font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">文档</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">API 参考</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">帮助中心</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">联系我们</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">API Reference</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
               </ul>
             </div>
           </div>
@@ -65,17 +65,17 @@ export const Footer: React.FC = () => {
         <div className="py-6 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} NyxTrans. 保留所有权利。
+              © {currentYear} NyxTrans. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                隐私政策
+                Privacy Policy
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                服务条款
+                Terms of Service
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie 政策
+                Cookie Policy
               </Link>
             </div>
           </div>

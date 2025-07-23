@@ -3,19 +3,17 @@
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
-import { useLanguage } from '@/contexts/LanguageContext'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
 
   const navItems = [
-    { label: t.nav.features, href: '#features' },
-    { label: t.nav.workflow, href: '#workflow' },
-    { label: t.nav.waitlist, href: '#waitlist' },
+    { label: 'Features', href: '#features' },
+    { label: 'Workflow', href: '#workflow' },
+    { label: 'Join Waitlist', href: '#waitlist' },
   ]
 
   return (

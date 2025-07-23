@@ -84,7 +84,7 @@ export const Logo: React.FC<LogoProps> = ({
           </span>
           {size === 'lg' && (
             <span className="text-xs text-gray-500 font-mono -mt-1">
-              代码翻译工具
+              Code Translation Tool
             </span>
           )}
         </div>

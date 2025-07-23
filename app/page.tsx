@@ -9,22 +9,22 @@ import { structuredData } from '@/lib/seo'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NyxTrans - Simplify Internationalization for Developers',
+  title: 'NyxTrans - Simple I18n Solution for Developers',
   description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
-  keywords: ['internationalization', 'i18n', 'localization', 'translation', 'multi-language', 'developers'],
+  keywords: ['i18n', 'internationalization', 'localization', 'translation', 'multi-language', 'developers'],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://nyxtrans.com',
     siteName: 'NyxTrans',
-    title: 'NyxTrans - Simplify Internationalization for Developers',
+    title: 'NyxTrans - Simple I18n Solution for Developers',
     description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NyxTrans - Internationalization Made Simple',
+        alt: 'NyxTrans - I18n Made Simple',
       },
     ],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@nyxtrans',
     creator: '@nyxtrans',
-    title: 'NyxTrans - Simplify Internationalization for Developers',
+    title: 'NyxTrans - Simple I18n Solution for Developers',
     description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
     images: ['/og-image.jpg'],
   },

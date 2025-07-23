@@ -8,43 +8,43 @@ import { useState } from 'react'
 const workflowSteps = [
   {
     id: 1,
-    title: 'CLI扫描代码',
-    description: '使用命令行工具扫描项目中的文本内容',
+    title: 'CLI Code Scanning',
+    description: 'Use command-line tools to scan text content in your project',
     icon: Code,
     color: 'from-blue-500 to-blue-600'
   },
   {
     id: 2,
-    title: '提取文本并生成Key',
-    description: '智能提取文本内容并生成唯一标识符',
+    title: 'Extract Text & Generate Keys',
+    description: 'Intelligently extract text content and generate unique identifiers',
     icon: Settings,
     color: 'from-purple-500 to-purple-600'
   },
   {
     id: 3,
-    title: '替换代码中的文本',
-    description: '将硬编码文本替换为国际化函数调用',
+    title: 'Replace Text in Code',
+    description: 'Replace hardcoded text with i18n function calls',
     icon: Zap,
     color: 'from-green-500 to-green-600'
   },
   {
     id: 4,
-    title: '上传文本到平台',
-    description: '将提取的文本上传到NyxTrans翻译平台',
+    title: 'Upload to Platform',
+    description: 'Upload extracted text to the NyxTrans translation platform',
     icon: Upload,
     color: 'from-orange-500 to-orange-600'
   },
   {
     id: 5,
-    title: '翻译管理',
-    description: '人工翻译、机器翻译或AI翻译多种选择',
+    title: 'Translation Management',
+    description: 'Choose from human translation, machine translation, or AI translation',
     icon: Globe,
     color: 'from-teal-500 to-teal-600'
   },
   {
     id: 6,
-    title: '文案发布',
-    description: '获取完成的翻译文件并集成到项目',
+    title: 'Content Publishing',
+    description: 'Get completed translation files and integrate them into your project',
     icon: Download,
     color: 'from-pink-500 to-pink-600'
   }
@@ -58,10 +58,10 @@ export const WorkflowSection: React.FC = () => {
       <Container>
         <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            简单流程，<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">轻松国际化</span>
+            Simple Process, <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Easy I18n</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            从代码扫描到翻译部署，NyxTrans为开发者提供完整的国际化解决方案
+            From code scanning to translation deployment, NyxTrans provides a complete i18n solution for developers
           </p>
         </div>
 
@@ -103,15 +103,15 @@ export const WorkflowSection: React.FC = () => {
         {/* 代码示例 */}
         <div className="mt-12 sm:mt-16 bg-gray-900 rounded-2xl p-4 sm:p-8 text-white mx-4 sm:mx-0">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-xl sm:text-2xl font-bold mb-2">代码示例</h3>
-            <p className="text-gray-400 text-sm sm:text-base">看看NyxTrans如何简化您的国际化工作流程</p>
+            <h3 className="text-xl sm:text-2xl font-bold mb-2">Code Example</h3>
+            <p className="text-gray-400 text-sm sm:text-base">See how NyxTrans simplifies your i18n workflow</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4 text-red-400 font-mono">使用前 - 硬编码文本</h4>
+              <h4 className="text-base sm:text-lg font-semibold mb-4 text-red-400 font-mono">Before - Hardcoded Text</h4>
               <div className="bg-gray-800 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-x-auto">
-                <div className="text-gray-500">{/* 原始代码 */}</div>
+                <div className="text-gray-500">{/* Original code */}</div>
                 <div className="text-white">
                   <span className="text-blue-400">function</span>{' '}
                   <span className="text-yellow-400">LoginForm</span>() {'{'}
@@ -120,7 +120,7 @@ export const WorkflowSection: React.FC = () => {
                   <span className="text-blue-400">return</span> (
                 </div>
                 <div className="text-white ml-8">
-                  &lt;<span className="text-red-400">h1</span>&gt;<span className="text-green-400">&quot;欢迎登录&quot;</span>&lt;/<span className="text-red-400">h1</span>&gt;
+                  &lt;<span className="text-red-400">h1</span>&gt;<span className="text-green-400">&quot;Welcome to Login&quot;</span>&lt;/<span className="text-red-400">h1</span>&gt;
                 </div>
                 <div className="text-white ml-4">)</div>
                 <div className="text-white">{'}'}</div>
@@ -128,9 +128,9 @@ export const WorkflowSection: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-4 text-green-400 font-mono">使用后 - 国际化支持</h4>
+              <h4 className="text-base sm:text-lg font-semibold mb-4 text-green-400 font-mono">After - I18n Support</h4>
               <div className="bg-gray-800 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-x-auto">
-                <div className="text-gray-500">{/* NyxTrans处理后 */}</div>
+                <div className="text-gray-500">{/* NyxTrans processed */}</div>
                 <div className="text-white">
                   <span className="text-blue-400">function</span>{' '}
                   <span className="text-yellow-400">LoginForm</span>() {'{'}

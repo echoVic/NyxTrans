@@ -10,9 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'NyxTrans - Simplify Internationalization for Developers',
+  title: 'NyxTrans - Simple I18n Solution for Developers',
   description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
-  keywords: ['internationalization', 'i18n', 'localization', 'translation', 'multi-language', 'developers'],
+  keywords: ['i18n', 'internationalization', 'localization', 'translation', 'multi-language', 'developers'],
   authors: [{ name: 'NyxTrans Team' }],
   creator: 'NyxTrans',
   publisher: 'NyxTrans',
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://nyxtrans.com',
     siteName: 'NyxTrans',
-    title: 'NyxTrans - Simplify Internationalization for Developers',
+    title: 'NyxTrans - Simple I18n Solution for Developers',
     description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NyxTrans - Internationalization Made Simple',
+        alt: 'NyxTrans - I18n Made Simple',
       },
     ],
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@nyxtrans',
     creator: '@nyxtrans',
-    title: 'NyxTrans - Simplify Internationalization for Developers',
+    title: 'NyxTrans - Simple I18n Solution for Developers',
     description: 'The easiest way to add multi-language support to your website. Built for indie developers and small teams.',
     images: ['/og-image.jpg'],
   },
@@ -102,7 +102,7 @@ export default function RootLayout({
               '@type': 'WebSite',
               name: 'NyxTrans',
               url: 'https://nyxtrans.com',
-              description: 'Internationalization tool for developers',
+              description: 'I18n tool for developers',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: 'https://nyxtrans.com/search?q={search_term_string}',

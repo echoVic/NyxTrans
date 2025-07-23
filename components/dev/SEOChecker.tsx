@@ -18,83 +18,83 @@ export const SEOChecker: React.FC = () => {
     const performSEOChecks = () => {
       const results: SEOCheck[] = []
 
-      // 检查页面标题
+      // Check page title
       const title = document.title
       if (title && title.length >= 30 && title.length <= 60) {
-        results.push({ name: '页面标题', status: 'pass', message: `标题长度合适: ${title.length}字符` })
+        results.push({ name: 'Page Title', status: 'pass', message: `Title length is appropriate: ${title.length} characters` })
       } else {
-        results.push({ name: '页面标题', status: 'fail', message: `标题长度不合适: ${title.length}字符 (建议30-60字符)` })
+        results.push({ name: 'Page Title', status: 'fail', message: `Title length is inappropriate: ${title.length} characters (recommended 30-60 characters)` })
       }
 
-      // 检查meta描述
+      // Check meta description
       const metaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content')
       if (metaDescription && metaDescription.length >= 120 && metaDescription.length <= 160) {
-        results.push({ name: 'Meta描述', status: 'pass', message: `描述长度合适: ${metaDescription.length}字符` })
+        results.push({ name: 'Meta Description', status: 'pass', message: `Description length is appropriate: ${metaDescription.length} characters` })
       } else {
-        results.push({ name: 'Meta描述', status: 'fail', message: `描述长度不合适: ${metaDescription?.length || 0}字符 (建议120-160字符)` })
+        results.push({ name: 'Meta Description', status: 'fail', message: `Description length is inappropriate: ${metaDescription?.length || 0} characters (recommended 120-160 characters)` })
       }
 
-      // 检查H1标签
+      // Check H1 tags
       const h1Tags = document.querySelectorAll('h1')
       if (h1Tags.length === 1) {
-        results.push({ name: 'H1标签', status: 'pass', message: '页面有且仅有一个H1标签' })
+        results.push({ name: 'H1 Tags', status: 'pass', message: 'Page has exactly one H1 tag' })
       } else {
-        results.push({ name: 'H1标签', status: 'fail', message: `页面有${h1Tags.length}个H1标签 (应该只有1个)` })
+        results.push({ name: 'H1 Tags', status: 'fail', message: `Page has ${h1Tags.length} H1 tags (should have only 1)` })
       }
 
-      // 检查图片alt属性
+      // Check image alt attributes
       const images = document.querySelectorAll('img')
       const imagesWithoutAlt = Array.from(images).filter(img => !img.getAttribute('alt'))
       if (imagesWithoutAlt.length === 0) {
-        results.push({ name: '图片Alt属性', status: 'pass', message: '所有图片都有alt属性' })
+        results.push({ name: 'Image Alt Attributes', status: 'pass', message: 'All images have alt attributes' })
       } else {
-        results.push({ name: '图片Alt属性', status: 'warning', message: `${imagesWithoutAlt.length}张图片缺少alt属性` })
+        results.push({ name: 'Image Alt Attributes', status: 'warning', message: `${imagesWithoutAlt.length} images missing alt attributes` })
       }
 
-      // 检查内部链接
+      // Check internal links
       const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="#"]')
-      results.push({ name: '内部链接', status: 'pass', message: `发现${internalLinks.length}个内部链接` })
+      results.push({ name: 'Internal Links', status: 'pass', message: `Found ${internalLinks.length} internal links` })
 
-      // 检查结构化数据
+      // Check structured data
       const structuredData = document.querySelector('script[type="application/ld+json"]')
       if (structuredData) {
-        results.push({ name: '结构化数据', status: 'pass', message: '页面包含结构化数据' })
+        results.push({ name: 'Structured Data', status: 'pass', message: 'Page contains structured data' })
       } else {
-        results.push({ name: '结构化数据', status: 'warning', message: '未发现结构化数据' })
+        results.push({ name: 'Structured Data', status: 'warning', message: 'No structured data found' })
       }
 
-      // 检查Open Graph标签
+      // Check Open Graph tags
       const ogTitle = document.querySelector('meta[property="og:title"]')
       const ogDescription = document.querySelector('meta[property="og:description"]')
       const ogImage = document.querySelector('meta[property="og:image"]')
       if (ogTitle && ogDescription && ogImage) {
-        results.push({ name: 'Open Graph', status: 'pass', message: '包含完整的OG标签' })
+        results.push({ name: 'Open Graph', status: 'pass', message: 'Contains complete OG tags' })
       } else {
-        results.push({ name: 'Open Graph', status: 'warning', message: 'OG标签不完整' })
+        results.push({ name: 'Open Graph', status: 'warning', message: 'OG tags incomplete' })
       }
 
-      // 检查Twitter Card
+      // Check Twitter Card
       const twitterCard = document.querySelector('meta[name="twitter:card"]')
       if (twitterCard) {
-        results.push({ name: 'Twitter Card', status: 'pass', message: '包含Twitter Card标签' })
+        results.push({ name: 'Twitter Card', status: 'pass', message: 'Contains Twitter Card tags' })
       } else {
-        results.push({ name: 'Twitter Card', status: 'warning', message: '缺少Twitter Card标签' })
+        results.push({ name: 'Twitter Card', status: 'warning', message: 'Missing Twitter Card tags' })
       }
 
-      // 检查Canonical URL
+      // Check Canonical URL
       const canonical = document.querySelector('link[rel="canonical"]')
       if (canonical) {
-        results.push({ name: 'Canonical URL', status: 'pass', message: '设置了canonical URL' })
+        results.push({ name: 'Canonical URL', status: 'pass', message: 'Canonical URL is set' })
       } else {
-        results.push({ name: 'Canonical URL', status: 'warning', message: '未设置canonical URL' })
+        results.push({ name: 'Canonical URL', status: 'warning', message: 'Canonical URL not set' })
       }
 
-      // 检查robots meta
+      // Check robots meta
       const robots = document.querySelector('meta[name="robots"]')
       if (robots) {
-        results.push({ name: 'Robots Meta', status: 'pass', message: `Robots设置: ${robots.getAttribute('content')}` })
+        results.push({ name: 'Robots Meta', status: 'pass', message: `Robots setting: ${robots.getAttribute('content')}` })
       } else {
-        results.push({ name: 'Robots Meta', status: 'warning', message: '未设置robots meta标签' })
+        results.push({ name: 'Robots Meta', status: 'warning', message: 'Robots meta tag not set' })
       }
 
       setChecks(results)
@@ -168,23 +168,23 @@ export const SEOChecker: React.FC = () => {
             ))}
           </div>
 
-          {/* 操作按钮 */}
+          {/* Action Buttons */}
           <div className="mt-4 space-y-2">
             <button
               onClick={() => {
                 const report = checks.map(c => `${c.name}: ${c.status.toUpperCase()} - ${c.message}`).join('\n')
                 navigator.clipboard.writeText(report)
-                alert('SEO报告已复制到剪贴板')
+                alert('SEO report copied to clipboard')
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700 transition-colors"
             >
-              复制报告
+              Copy Report
             </button>
             <button
               onClick={() => window.open('https://search.google.com/test/mobile-friendly', '_blank')}
               className="w-full bg-gray-600 text-white py-2 px-4 rounded text-sm hover:bg-gray-700 transition-colors"
             >
-              Google移动友好测试
+              Google Mobile-Friendly Test
             </button>
           </div>
         </div>
