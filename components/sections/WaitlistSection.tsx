@@ -96,7 +96,7 @@ export const WaitlistSection: React.FC = () => {
                 <span className="text-primary-600 font-bold">1</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Priority Access</h3>
-              <p className="text-sm text-gray-600">Get product access as soon as it's available</p>
+              <p className="text-sm text-gray-600">Get product access as soon as it&apos;s available</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">

@@ -93,8 +93,8 @@ export const MobileTestHelper: React.FC = () => {
             </div>
 
             <div className="text-sm text-gray-600">
-              <p>Current Viewport: {selectedDevice.width}×{selectedDevice.height}</p>
-              <p>Actual Viewport: {viewportSize.width}×{viewportSize.height}</p>
+              <p>{`Current Viewport: ${selectedDevice.width}×${selectedDevice.height}`}</p>
+              <p>{`Actual Viewport: ${viewportSize.width}×${viewportSize.height}`}</p>
             </div>
 
             <div className="space-y-2">
