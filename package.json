@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "install": "pnpm install",
+    "update": "pnpm update"
   },
   "dependencies": {
     "@heroui/react": "^2.8.1",

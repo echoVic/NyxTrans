@@ -1,0 +1,9 @@
+# my-rule
+
+这是一个规则文件，用于帮助 AI 理解您的代码库和遵循项目约定。
+
+Package Manager: pnpm (replacing npm)
+Framework: Next.js with TypeScript
+Styling: Tailwind CSS 3.4.17
+UI Components: @heroui/react, shadcn/ui components
+
