@@ -1,0 +1,20 @@
+{
+  "path": "/Users/bytedance/Documents/GitHub/NyxTrans",
+  "desc": "这是NyxTrans代码翻译工具落地页项目，具有品牌标志设计、技术感排版、扁平化图标系统、简约插图、中英文双语支持、响应式布局等特色功能，专为开发者和小团队打造的国际化工具展示网站。",
+  "id": "9cd3db010db94471b431b4682cae0b8c",
+  "data": {
+    "spaceKey": "9cd3db010db94471b431b4682cae0b8c",
+    "connections": {
+      "webIDE": "https://9cd3db010db94471b431b4682cae0b8c.ap-singapore.cloudstudio.club",
+      "preview": "https://9cd3db010db94471b431b4682cae0b8c--{port}.ap-singapore.cloudstudio.club",
+      "api": "https://9cd3db010db94471b431b4682cae0b8c--api.ap-singapore.cloudstudio.club",
+      "pty": "https://9cd3db010db94471b431b4682cae0b8c--pty.ap-singapore.cloudstudio.club"
+    }
+  },
+  "config": {
+    "api": "https://9cd3db010db94471b431b4682cae0b8c--api.ap-singapore.cloudstudio.club",
+    "pty": "https://9cd3db010db94471b431b4682cae0b8c--pty.ap-singapore.cloudstudio.club",
+    "region": "ap-shanghai",
+    "spaceKey": "9cd3db010db94471b431b4682cae0b8c"
+  }
+}
