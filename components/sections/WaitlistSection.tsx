@@ -69,17 +69,17 @@ export const WaitlistSection: React.FC = () => {
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              感谢您的关注！
+              Thank You for Your Interest!
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              我们已收到您的申请。您将是第一批体验 NyxTrans 的用户之一。
-              我们会在产品准备就绪时第一时间通知您。
+              We have received your application. You will be one of the first users to experience NyxTrans.
+              We will notify you as soon as the product is ready.
             </p>
             <Button 
               variant="outline" 
               onClick={() => setIsSubmitted(false)}
             >
-              继续了解更多
+              Learn More
             </Button>
           </div>
         </Container>
