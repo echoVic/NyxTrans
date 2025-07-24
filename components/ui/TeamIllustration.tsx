@@ -14,6 +14,8 @@ export const TeamIllustration: React.FC<TeamIllustrationProps> = ({ className = 
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto"
+        aria-label="Illustration showing developers collaborating on internationalization"
+        role="img"
       >
         {/* Background */}
         <rect width="400" height="300" fill="#F8FAFC" rx="12" />

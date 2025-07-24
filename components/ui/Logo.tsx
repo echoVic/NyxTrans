@@ -32,6 +32,8 @@ export const Logo: React.FC<LogoProps> = ({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-full"
+          aria-label="NyxTrans logo - Code translation tool"
+          role="img"
         >
           {/* Background Circle with Gradient */}
           <defs>

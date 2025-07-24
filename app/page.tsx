@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NyxTrans - I18n Made Simple',
+        alt: 'NyxTrans - Simple I18n solution for developers and teams',
       },
     ],
   },

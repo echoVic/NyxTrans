@@ -1,7 +1,7 @@
 import { WebVitalsWrapper } from '@/components/analytics/WebVitalsWrapper'
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 
 const inter = Inter({
@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nyxtrans.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      'en': 'https://nyxtrans.com'
+    },
   },
   icons: {
     icon: [
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NyxTrans - I18n Made Simple',
+        alt: 'NyxTrans - Simple internationalization solution for developers and teams',
       },
     ],
   },
@@ -104,7 +107,7 @@ export default function RootLayout({
               '@type': 'WebSite',
               name: 'NyxTrans',
               url: 'https://nyxtrans.com',
-              description: 'I18n tool for developers',
+              description: 'Simple i18n solution for developers and teams',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: 'https://nyxtrans.com/search?q={search_term_string}',
@@ -113,6 +116,10 @@ export default function RootLayout({
             }),
           }}
         />
+        <link rel="alternate" hrefLang="en" href="https://nyxtrans.com" />
+        <link rel="alternate" hrefLang="zh-CN" href="https://nyxtrans.com/zh" />
+        <link rel="alternate" hrefLang="ja" href="https://nyxtrans.com/ja" />
+        <link rel="alternate" hrefLang="x-default" href="https://nyxtrans.com" />
       </body>
     </html>
   )
