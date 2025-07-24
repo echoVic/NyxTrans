@@ -173,7 +173,7 @@ export const WaitlistSection: React.FC = () => {
 
           {/* Social Proof */}
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-4">已有 <span className="font-semibold text-primary-600">{waitlistCount.toLocaleString()}+</span> 位开发者加入等待列表</p>
+            <p className="text-sm text-gray-600 mb-4"><span className="font-semibold text-primary-600">{waitlistCount.toLocaleString()}+</span> developers have already joined the waitlist</p>
             <div className="flex justify-center items-center space-x-2">
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="w-8 h-8 bg-gray-300 rounded-full"></div>
