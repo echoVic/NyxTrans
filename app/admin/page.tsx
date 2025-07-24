@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 interface WaitlistEntry {
   id: string
@@ -10,7 +11,7 @@ interface WaitlistEntry {
 }
 
 export default function AdminPage() {
-  const [entries, setEntries] = useState<WaitlistEntry[]>([])
+  const [_entries, _setEntries] = useState<WaitlistEntry[]>([])
   const [loading, setLoading] = useState(true)
   const [stats, setStats] = useState({ total: 0 })
 
@@ -118,18 +119,18 @@ export default function AdminPage() {
             >
               导出数据
             </button>
-            <a
+            <Link
               href="/test-waitlist"
               className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-center"
             >
               测试页面
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-center"
             >
               返回首页
-            </a>
+            </Link>
           </div>
         </div>
 
