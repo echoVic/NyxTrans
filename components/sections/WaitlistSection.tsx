@@ -3,6 +3,7 @@
 import { Container } from '@/components/layout/Container'
 import { Section } from '@/components/layout/Section'
 import { Button } from '@/components/ui/Button'
+import { useWaitlistStats } from '@/hooks/useWaitlistStats'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CheckCircle, Mail } from 'lucide-react'
 import React, { useState } from 'react'
@@ -19,6 +20,7 @@ type WaitlistFormData = z.infer<typeof waitlistSchema>
 export const WaitlistSection: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const { count: waitlistCount } = useWaitlistStats()
 
   const {
     register,
@@ -33,16 +35,26 @@ export const WaitlistSection: React.FC = () => {
     setIsLoading(true)
     
     try {
-      // Here you can integrate actual API calls
-      console.log('Waitlist submission:', data)
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || '提交失败')
+      }
       
       setIsSubmitted(true)
       reset()
     } catch (error) {
       console.error('Submission error:', error)
+      // 这里可以添加错误提示给用户
+      alert(error instanceof Error ? error.message : '提交失败，请稍后重试')
     } finally {
       setIsLoading(false)
     }
@@ -161,12 +173,12 @@ export const WaitlistSection: React.FC = () => {
 
           {/* Social Proof */}
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <p className="text-sm text-gray-600 mb-4"><span className="font-semibold text-primary-600">1,234+</span> developers have already joined the waitlist</p>
+            <p className="text-sm text-gray-600 mb-4">已有 <span className="font-semibold text-primary-600">{waitlistCount.toLocaleString()}+</span> 位开发者加入等待列表</p>
             <div className="flex justify-center items-center space-x-2">
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="w-8 h-8 bg-gray-300 rounded-full"></div>
               ))}
-              <span className="text-sm text-gray-500 ml-2">+1229</span>
+              <span className="text-sm text-gray-500 ml-2">+{Math.max(0, waitlistCount - 5).toLocaleString()}</span>
             </div>
           </div>
         </div>
