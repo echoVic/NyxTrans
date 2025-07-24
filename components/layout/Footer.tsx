@@ -25,13 +25,13 @@ export const Footer: React.FC = () => {
                 The simplest i18n solution for indie developers and small teams, making your products go global effortlessly.
               </p>
               <div className="flex space-x-4">
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://twitter.com/echo_vic" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   <Twitter className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://github.com/echovic" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="mailto:137844255@qq.com" className="text-gray-400 hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
                 </Link>
               </div>
